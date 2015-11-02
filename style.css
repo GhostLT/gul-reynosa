@@ -1,0 +1,81 @@
+@include flexbox;
+
+body{
+    background-color:black;
+    color:white;
+}
+
+header{
+    color:yellow;
+}
+
+/*=================== CLASE INLINE-BLOCK =============*/
+.inline-block{
+display:inline-block;
+}
+/*=================== LAYOUT MENU ====================*/
+.flex-menu{
+    max-width:100%;       /*ancho maximo*/
+    width:100%;            /*ancho ocupado*/          
+    list-style-type:none; /*retira estilos por defecto*/
+    margin:3em auto;      /*margen interior y centrado*/
+    padding:0;            /*relleno*/
+    background-color:midnightblue; /*color*/
+
+/*=================== USO DE FLEXBOX ==================*/
+
+    display:flex;         
+    
+}
+
+.item-li-menu{
+    height:100%;        /*alto*/
+    width:100%;        /*ancho*/
+    line-height:50px;  /*alto de linea*/
+    font-size:20px;     /*tamano de letra*/
+    background-color:steelblue;    /*color de fondo*/
+    color:#fff;         /*color*/
+    text-align:center;   /*aliado de texto*/
+    margin:1px 1px;     /*margenes verticales y horizontales*/
+}
+
+/*=================== LAYOUT CONTENEDOR ====================*/
+.flex-contenedor{
+    max-width:100%;       /*ancho maximo*/
+    width:100%;            /*ancho ocupado*/          
+    list-style-type:none; /*retira estilos por defecto*/
+    margin:3em auto;      /*margen interior y centrado*/
+    padding:0;            /*relleno*/
+    background-color:gray; /*color*/
+
+/*=================== USO DE FLEXBOX ==================*/
+
+    display:flex;         
+}
+
+
+
+.item-contenedor-section{
+    height:80%;        /*alto*/
+    width:80%;        /*ancho*/
+    line-height:50px;  /*alto de linea*/
+    font-size:10px;     /*tamano de letra*/
+    background-color:red;    /*color de fondo*/
+    color:#fff;         /*color*/
+    text-align:center;   /*aliado de texto*/
+    margin:20px 20px;     /*margenes verticales y horizontales*/
+    
+}
+
+
+.item-contenedor-aside{
+    height:20%;        /*alto*/
+    width:20%;        /*ancho*/
+    line-height:20px;  /*alto de linea*/
+    font-size:10px;     /*tamano de letra*/
+    background-color:green;    /*color de fondo*/
+    color:#fff;         /*color*/
+    text-align:center;   /*aliado de texto*/
+    margin:20px 20px;     /*margenes verticales y horizontales*/
+    
+}

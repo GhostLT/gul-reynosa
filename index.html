@@ -1,25 +1,38 @@
 <!doctype html>
+<!-- indicar el idioma -->
 <html lang="es">
   <head>
+    <!-- especificar siempre en UTF8 -->
     <meta charset="UTF-8"/>
+    <!--eliminar el zoom ajustar al ancho del dispositivo por defecto para moviles-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <title>Plantilla</title>
+    <!-- Nombre de la pagina en el Chrome -->
+    <title>GUL REYNOSA</title>
+    <meta name="description" content="descripcion de la pagin">
+    <!-- Usar normalize para resetear las etiquetas -->
     <link href="normalize.css" rel="stylesheet"/>
     <link href="stylus.css" rel="stylesheet"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./imagenes/favicon.ico" />
   </head>
   <body>
+    <!-- cabecera de la pagina -->
     <header>
+      <!-- metemos en un div el logo -->
       <div class="logo left">
         <img alt="puls4" src="imagenes/logo.png"/>
       </div>
+      <!-- metemos otro div para los titulos -->
       <div class="titular">
         <h1 class="titulo">GNU/LINUX</h1>
+        <!-- filtro o  datos del usuario o categoria del tag-->
         <div>
           <a class="filtro" href="#">CLAN GUL REYNOSA</a>
           <a class="publicar right" href="#">#GhostLT</a>
         </div>
       </div>
+      <!-- creamos un div para el avatar del usuario -->
       <div class="usuario">
+        <!-- anexamos un avatar dentro de figure -->
         <figure class="avatar">
           <img alt="javier" src="imagenes/avatar.jpg"/>
         </figure>
@@ -27,7 +40,7 @@
       </div>
     </header>
 
-    
+    <!-- usar nav para especificar el menu -->
     <nav>
       <ul class="menu">
         <li><a href="#">Cursos</a></li>
@@ -41,15 +54,19 @@
       </ul>  
     </nav>
 
-
-    
-    <section class="posts">
+    <div class="flexcontenedor">
+    <!-- area del contenido dentro del section -->
+    <section class="posts item-section-aside-flex flexsection">
       <!--primer article-->
-      <article class="post">
+      <!-- ultimo item dentro de un contenido semantico -->
+      <article class="post item-section">
+        <!-- aqui va la capa de la descripcion -->
         <div class="descripcion">
+          <!-- anexamos la imagen dentro de un figure -->
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
           </figure>
+          <!-- segundo nivel todo el contenido del post -->
           <div class="detalles">
             <h2 class="titulo">
               Las Mejores Distribuciones de GNU/Linux 
@@ -59,6 +76,8 @@
             </h2>
           </div>
         </div>
+        <!-- segunda mitad donde van los likes -->
+        <!-- 2 areas area de los votos y area de los datos -->
         <div class="acciones">
           <div class="votos left">
             <a class="up" href="#"></a>
@@ -73,7 +92,7 @@
       </article>
       
 <!--segundo article-->
-<article class="post">
+<article class="post item-section">
         <div class="descripcion">
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
@@ -101,7 +120,7 @@
       </article>
 
 <!--tercer article-->
-<article class="post">
+<article class="post item-section">
         <div class="descripcion">
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
@@ -129,7 +148,7 @@
 </article>
 
 <!--article cuatro-->
-<article class="post">
+<article class="post item-section">
         <div class="descripcion">
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
@@ -157,7 +176,7 @@
 </article>
 
 <!--seccion cinco-->
-<article class="post">
+<article class="post item-section">
         <div class="descripcion">
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
@@ -185,7 +204,7 @@
 </article>
 
 <!--seccion seis-->
-<article class="post">
+<article class="post item-section">
         <div class="descripcion">
           <figure class="imagen left">
             <img alt="foto" src="imagenes/foto.jpg"/>
@@ -215,7 +234,102 @@
 
     </section>
 
+    <aside class="item-section-aside-flex">
+      <article>
+        <div class="redes_sociales">
+          <h4><strong>Siguenos en las Redes</strong> </h4>
+          <a class="facebook" href="#"></a>
+          <a class="twitter" href="#"></a>
+          <a class="google" href="#"></a>
+          <a class="youtube" href="#"></a>
+          <a class="github" href="#"></a>
+        </div>
+      </article>
 
+      <!--primer top articulos-->
+     
+      <article>
+         <h4>TOP Articulos</h4>
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="http://lorempixel.com/40/40/"/>     </figure>
+            <h3 class="titulo-articulo1">Ranking de las mejores distribuciones GNU/Linux de 2015</h3>
+         
+        </div>
+      </article>
+
+      <!--segundo top articulos-->
+      <article>
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="http://lorempixel.com/40/40/"/>
+          </figure>
+          <h3 class="titulo-articulo">Recopilacion de las distribuciones ligeras</h3>
+        </div>
+      </article>
+
+      <!--tercer top articulos-->
+      <article>
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="#"/>
+          </figure>
+          <h3 class="titulo-articulo">Como se maneja un arduino</h3>
+        </div>
+      </article>
+
+<!--cuarto top articulos-->
+      <article>
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="#"/>
+          </figure>
+          <h3 class="titulo-articulo">Recopilacion de las distribuciones ligeras</h3>
+        </div>
+      </article>
+
+      <!--quinto top articulos-->
+      <article>
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="#"/>
+          </figure>
+          <h3 class="titulo-articulo">Erle Robotics entre las 15 start-ups finalistas en Robohub 2015</h3>
+        </div>
+      </article>
+
+ <!--sexto top articulos-->
+      <article class="post">
+        <div class="top-articulos">
+          <figure class="articulo">
+            <img alt="articulo" src="#"/>
+          </figure>
+          <h3 class="titulo-articulo">Erle-Brain 2: el nuevo cerebro robótico de Erle Robotics</h3>
+        </div>
+      </article>
+
+      <article>
+        <div class="secciones">
+          <h2>Secciones</h2>
+       <ul class="menu-secciones">
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Empresas</a></li>
+        <li><a href="#">Universidades</a></li>
+        <li><a href="#">Preparatorias</a></li>
+        <li><a href="#">Secundarias</a></li>
+        <li><a href="#">Conferencias</a></li>
+        <li><a href="#">Proximos Concursos</a></li>
+      </ul>  
+
+        </div>
+      </article>
+
+      
+    </aside>
+
+
+    </div><!--cerramos el flex contenedor-->    
 
     <footer>
       <h3><strong>Powered by CLAN GUL REYNOSA</strong><span class="mejor">GNU/LINUX 2015</span></h3>

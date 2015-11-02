@@ -1,0 +1,28 @@
+.icon-pen:before {
+	content: "\e900";
+}
+.icon-star-full:before {
+	content: "\e901";
+}
+.icon-circle-up:before {
+	content: "\e902";
+}
+.icon-circle-down:before {
+	content: "\e903";
+}
+.icon-google-plus:before {
+	content: "\e904";
+}
+.icon-facebook2:before {
+	content: "\e905";
+}
+.icon-twitter:before {
+	content: "\e906";
+}
+.icon-youtube3:before {
+	content: "\e907";
+}
+.icon-github3:before {
+	content: "\e908";
+}
+

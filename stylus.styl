@@ -4,15 +4,18 @@ gris_texto = #7A7A7A
 naranja = #DD4F24
 
 @font-face {
-font-family: 'iconitos';
-src:url('./fonts/icomoon.eot?jkpg0');
-src:url('./fonts/icomoon.eot?jkpg0#iefix') format('embedded-opentype'),
-url('./fonts/icomoon.ttf?jkpg0') format('truetype'),
-url('./fonts/icomoon.woff?jkpg0') format('woff'),
-url('./fonts/icomoon.svg?jkpg0#icomoon') format('svg');
-font-weight: normal;
-font-style: normal;
-}
+  font-family: 'iconitos';
+    src:url('./fonts/comoon.eot?9c3mdw');
+      src:url('./fonts/icomoon.eot?9c3mdw#iefix') format('embedded-opentype'),
+url('./fonts/icomoon.ttf?9c3mdw') format('truetype'),
+url('./fonts/icomoon.woff?9c3mdw') format('woff'),
+url('./fonts/icomoon.svg?9c3mdw#icomoon') format('svg');
+  font-weight: normal;
+    font-style: normal;
+    }
+
+/*1em =32px*/
+/*1rem = 16px*/
 
 a
     color naranja
@@ -35,15 +38,19 @@ h3
     font-weight normal
 
 strong
-    display inline
+    display block
 
 header
     background gris_oscuro
-    box-shadow 0 5px 0 rgba(0,0,0,0.2)
+    /*sombrita del menu*/
+    box-shadow 0 5px 0 rgba(0,0,0,0.2) /*mover en x,mover en y,sombra dura difuminacion,transparencia y no olvidar colocar un z index de 1*/
     color white
+    /*colocamos overflow para corregir el moche de las imagenes*/
     overflow hidden
-    padding 0.5em
+    padding 1em
+    /*toma como 0 0 al header*/
     position relative
+    /*posicionamos la sombra del menu sobre la barra nav para que se aprecie*/
     z-index 1
 
     .logo
@@ -55,58 +62,70 @@ header
             width 80px 
 
     .titular
-        margin 0 80px 0 70px
+        margin 0 80px 0 70px  /*arriba abajo derecha izquierda*/
 
         .filtro
-            color naranja
-            font-size 14px
-            font-weight bold
-            font-style italic
-            text-decoration none
+            color naranja     /*color de letra*/
+            font-size 14px    /*tamano de letra*/
+            font-weight bold  /*negrita*/
+            font-style italic /*cursiva*/
+            text-decoration none     /*sin subrayado el link*/
 
         .publicar
-            background naranja
-            color white
-            font-style italic
-            margin -5px 1em 0 0
-            padding 0.2em 0.5em
-            text-decoration none
-            text-shadow 1px 1px 0px black
+            background naranja  /*fondo*/
+            color white         /*color de letra*/
+            font-style italic   /*cursiva*/
+            margin -5px 1.5em 0 0  /*arriba abajo derecha izquierda*/
+            padding 0.2em 0.5em  /*arriba lados*/
+            text-decoration none /*sin subrayado el link*/
+            text-shadow 1px 1px 0px black  /*sombra de texto xuanto se va a mover la sombra en x,en y, difuminacion de la sombra  es dura,color de la sombra*/
 
             &:before
                  display inline-block
                  font-family "iconitos"
-                 content "\e900"
+                 content "\e906"
                  margin 0 3px 0 0
         .titulo
             color azul
             font-size 18px
             font-weight normal
-            margin 16px 5px 5px 5px
+            margin 16px 5px 5px 5px  /*arriba abajo derecha izquierda*/
             padding 0
 
      .usuario
+     /*hace referencia al header*/
         position absolute
         right 10px
         top 10px
 
         .avatar
-            margin 0 1.5em 0 0
+            margin 0 .5em 0 0 /*arriba abajo derecha izquierda*/
+              /*ubicar la posicion relative para que trabaje z-index*/
             position relative
+            /*capa amayor numero mas arraba queda*/
             z-index 2
 
             img
+                /*ancho de la imagen avatar*/
                 width 60px
+                /*redondeamos la imagen del avatar*/
                 border-radius 50%
                 
         .flechita
-             background naranja 
+             /*color de bondo naranja*/ 
+             background naranja
+             /*color de texto blanco*/
              color white
+             /*convertimos en una caja la clase flechita*/
              display block
+             /*agregamos con relleno*/
              padding 3px
+             /*colocamos la flecha en position absolute*/
              position absolute
+             /*ubicamos la posicion*/
              right 0
-             top 8px
+             top 21px
+             /*texto alineado a la derecha*/
              text-align right
              text-decoration none
              width 50%
@@ -120,60 +139,71 @@ header
 
 nav
     background azul
+    /*borde blanco del menu*/
     border-left 15px solid white
-    border-right 15px solid white
+    /*position relative para ajustar la flecha con el psudoselector*/
     position relative
-    
+
+    /*pseudoelementos separa la interaccion del contenido shadowdoom*/
+    /*& al objeto de arriba*/
     &:before
-          border-bottom 20px solid transparent
+          border-bottom 20px solid transparent /*borde ancho,tipo,color*/
           border-left 37px solid white
           border-top 20px solid transparent
+          /*before exige que coloquemos content*/
           content ""
+          /*posicion absolute para ajustar la flecha*/
           position absolute
           top 0
           left 0 
 
-    &:after
-          border-bottom 20px solid transparent
-          border-right 37px solid white
-          border-top 20px solid transparent
-          content ""
-          position absolute
-          top 0
-          right 0
           
 nav
-    height 40px
-    line-height 40px
-    margin 0
-    padding 0
+    height 40px      /*alto por defecto*/
+    line-height 40px  /*alto de las lineas de texto*/
+    margin 0           /*arriba abajo derecha izquierda*/
+    padding 0          /*quitar el relleno por defecto*/
     background azul
-    overflow-x auto
-    white-space nowrap
+    overflow-x auto    /*reseteamos x para que se ajuste automaticamente*/
+    white-space nowrap /*que siga derecho las cajas del menu*/
 
     .menu
+    /*todos los objetos crean un margen por defecto y hay que eliminarselo para que el nav se pegue con el header*/
          margin 0
          li
+         /*con esto la lista  vertical deja de existir y se coloca uno del lado del otro inline-block en automatico desaparece el puntuto*/
               display inline-block
+              
 
               a
                    /*border 1px solid*/ 
+                   /*color del texto*/
                    color white
-                   padding 0.2em
-                   margin 0 0.2em
+                   padding 0.2em  /*volver grandes a las etiquetas*/
+                   margin 0 0.2em /*separacion arriba lados*/
+                   /*sin decoraciones*/
                    text-decoration none
 
+              a:hover
+                   color naranja
+/*posts es el section*/
 .posts
+/*le colocamos un relleno bonito*/
      padding 0.5em
 
      .post
+         /*fondo del articulo*/
          background white
+         /*borde redondeado esq-sup-der,esq-sup-izq,abajo-media-letra*/
          border-radius 0 0 0.5em 0.5em
+         /*color de la letra*/
          color gris_texto
+         /*sombra derecha,abajo,difuminacion,color,porcentaje de sombra*/
          box-shadow 2px 2px 10px rgba(black, 0.5)
          margin-bottom 1em
 
          .acciones
+              /* creamos la barrita divisoria azul*/
               border-top 3px solid azul
               padding 0.5em
               overflow hidden
@@ -194,7 +224,7 @@ nav
 
                        &:after
                             font-family "iconitos"
-                            color:#E0D561
+                            color #E0D561
                             content "\e901"
 
              .votos
@@ -216,22 +246,23 @@ nav
                        &:before
                             font-family "iconitos"
                             font-size 1.5em
-                            content "\e903"
+                            content "\e902"
                             vertical-align bottom
 
          .descripcion
               color gris_texto
 
               .detalles
+              /*alto de la imagen*/
                    height 160px
                    margin-left 130px
 
                    .autor
-                        margin 0.5em 0 2em 0
+                        margin 0.5em 0 2em 0 /*margen arriba abajo izq ere*/
 
                    .fecha
                         /*float right*/
-                        margin -0 1em 0 0
+                        margin  0 1em 0 0
                         
 
                    .tag
@@ -245,13 +276,17 @@ nav
                          color gris_oscuro
                          font-size 18px
                          font-style italic
+                         /*todos los contenedores de texto tienen un margen que se sale de su contenedor es necesario eliminarlo asi*/
                          margin 0
-                         padding 0.5em 0.5em 0 0
+                         padding 0.5em 0.5em 0 0 /*relleno arriba, derecha,abajo,izquierda*/
 
               /*.imagen*/
+              /*flotamos la imagen a la izquierda para que el texto la rodee*/
                    /*float left*/
                    img
+                   /*ajustamos el tamano de la imagen*/
                        height 160px
+                       /*ajustamos la imagen arriba como buena practica*/
                        vertical-align top
                        width 120px
 .left
@@ -260,15 +295,109 @@ nav
 .right
     float right
 
-@media screen and (min-width: 768px)
+aside
+     background white
+     border-radius 0 0 0.5em 0.5em
+     box-shadow 2px 2px 10px rgba(black,0.5)
+     margin 0.5em
+     padding 0em 1.5em 0em 1.5em
+     text-align left
+     
 
-    .posts
-        .post
-            display inline-block
-            width 48%
-            vertical-align top
-            &:nth-child(odd)
-                margin-right 2%
+     .redes_sociales          
+          color naranja
+          font-size 14px
+          font-style italic
+          margin 0
+          white-space nowrap
+     
+     .facebook
+          text-decoration none
+          &:after
+               font-family "iconitos"
+               color gris_oscuro
+               content "\e905"
+           
+     .twitter
+          text-decoration none
+          &:after
+               font-family "iconitos"
+               color gris_oscuro
+               content "\e906"
+     .google
+          text-decoration none
+          &:after
+               font-family "iconitos"
+               color gris_oscuro
+               content "\e904"
+     .youtube
+          text-decoration none
+          &:after
+               font-family "iconitos"
+               color gris_oscuro
+               content "\e907"
+     .github
+          text-decoration none
+          &:after
+               font-family "iconitos"
+               color gris_oscuro
+               content "\e908"
+
+aside
+     article
+          h4
+               display inline 
+               color naranja
+               font-size 14px
+               font-style italic
+               margin-top 1em
+               white-space wrap
+     
+          .top-articulos
+               border solid blue 1px
+               text-align left
+              
+          .articulo
+               border solid red 1px
+               img
+                    display inline
+                    
+                    
+                    
+     
+.flexcontenedor
+     display flex
+     flex-direction row
+     flex-wrap nowrap
+     
+     
+
+.item-section-aside-flex     
+     display flex
+     flex-direction column
+
+.flexsection
+     display flex
+     /*especificamos la direccion por defecto*/
+     flex-direction row
+     flex-wrap wrap
+    
+.item-section
+     width 100%
+     display flex
+     flex-direction column
+     order 0
+     
+ 
+/*@media screen and (min-width: 768px)*/
+
+/*    .posts */
+/*        .post */
+/*            display inline-block */
+/*            width 48% */
+/*            vertical-align top */
+/*            &:nth-child(odd) */
+/*                margin-right 2% */
 
 
 /*      header */
