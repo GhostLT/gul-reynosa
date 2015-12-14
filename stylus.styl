@@ -19,6 +19,7 @@ url('./fonts/icomoon.svg?9c3mdw#icomoon') format('svg');
 
 a
     color naranja
+    text-decoration none
 
 body
     background #E8E8E8
@@ -137,6 +138,9 @@ header
                   content "\e903"
                   text-shadow 1px 1px 0px black
 
+.flexcontenedor
+     display flex
+
 nav
     background azul
     /*borde blanco del menu*/
@@ -201,6 +205,7 @@ nav
          /*sombra derecha,abajo,difuminacion,color,porcentaje de sombra*/
          box-shadow 2px 2px 10px rgba(black, 0.5)
          margin-bottom 1em
+         width 650px
 
          .acciones
               /* creamos la barrita divisoria azul*/
@@ -297,22 +302,24 @@ nav
 
 aside
      background white
+     margin .5em 1em 1.5em 1em
+     width 300px
      border-radius 0 0 0.5em 0.5em
      box-shadow 2px 2px 10px rgba(black,0.5)
-     margin 0.5em
+    // margin 0.5em
      padding 0em 1.5em 0em 1.5em
      text-align left
-     
 
      .redes_sociales          
           color naranja
           font-size 14px
           font-style italic
           margin 0
-          white-space nowrap
+          text-align center
      
      .facebook
           text-decoration none
+          padding-left 25%
           &:after
                font-family "iconitos"
                color gris_oscuro
@@ -341,52 +348,28 @@ aside
           &:after
                font-family "iconitos"
                color gris_oscuro
-               content "\e908"
+               content "\e908"              
+     .articulos-novedades
+          list-style-type none
+          ul
+               li
+                    list-style-type none     
+                    a
+                         text-decoration none
+                         
+          
+h2
+     text-align center
+                  
+.menu-secciones
+     list-style-type none
+                   
 
-aside
-     article
-          h4
-               display inline 
-               color naranja
-               font-size 14px
-               font-style italic
-               margin-top 1em
-               white-space wrap
      
-          .top-articulos
-               border solid blue 1px
-               text-align left
-              
-          .articulo
-               border solid red 1px
-               img
-                    display inline
+          
                     
                     
-                    
-     
-.flexcontenedor
-     display flex
-     flex-direction row
-     flex-wrap nowrap
-     
-     
 
-.item-section-aside-flex     
-     display flex
-     flex-direction column
-
-.flexsection
-     display flex
-     /*especificamos la direccion por defecto*/
-     flex-direction row
-     flex-wrap wrap
-    
-.item-section
-     width 100%
-     display flex
-     flex-direction column
-     order 0
      
  
 /*@media screen and (min-width: 768px)*/

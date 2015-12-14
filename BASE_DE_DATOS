@@ -1,0 +1,53 @@
+CREACION DE BASE DE DATOS
+mysql>
+CREATE DATABASE gulreynosa;
+
+CREACION DE LA TABLA USUARIOS
+mysql>
+CREATE TABLE usuarios(
+id int(4) NOT NULL auto_increment,
+username varchar(20) NOT NULL,
+password varchar(40) NOT NULL,
+PRIMARY KEY (id)
+)ENGINE=InnoDB; 
+
+CREACION DE LA TABLA SECCIONES
+mysql>
+CREATE TABLE secciones(
+id int(6) NOT NULL auto_increment,
+noticia_id int(6) NOT NULL,
+nombre varchar(30) NOT NULL,
+posicion int(3) NOT NULL,
+visibilidad tinyint(4) NOT NULL,
+PRIMARY KEY (id)
+)ENGINE=InnoDB; 
+
+CREACION DE LA TABLA NOTICIAS
+mysql>
+CREATE TABLE noticias(
+id int(6) NOT NULL auto_increment,
+autor varchar(30) NOT NULL,
+titulo varchar(30) NOT NULL,
+categoria varchar(30) NOT NULL,
+fecha date NOT NULL,
+noticia blob NOT NULL,
+PRIMARY KEY (id)
+)ENGINE=InnoDB; 
+
+CREACION DE LA TABLA CONFERENCIAS
+mysql>
+CREATE TABLE conferencias(
+id int(6) NOT NULL auto_increment,
+descripcion varchar(30) NOT NULL,
+fecha date NOT NULL,
+PRIMARY KEY (id)
+)ENGINE=InnoDB; 
+
+CREACION DE LA TABLA PROXIMOS CONCURSOS
+mysql>
+CREATE TABLE proxconcursos(
+id int(6) NOT NULL auto_increment,
+descripcion varchar(30) NOT NULL,
+fecha date NOT NULL,
+PRIMARY KEY (id)
+)ENGINE=InnoDB; 

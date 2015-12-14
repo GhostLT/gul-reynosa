@@ -1,9 +1,15 @@
+<?php
+
+                require_once("conexion/conexion.php");
+                
+
+?>
 <!doctype html>
 <!-- indicar el idioma -->
 <html lang="es">
   <head>
     <!-- especificar siempre en UTF8 -->
-    <meta charset="UTF-8"/>
+    <meta charset="latin1"/>
     <!--eliminar el zoom ajustar al ancho del dispositivo por defecto para moviles-->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <!-- Nombre de la pagina en el Chrome -->
@@ -50,13 +56,13 @@
         <li><a href="#">Preparatorias</a></li>
         <li><a href="#">Secundarias</a></li>
         <li><a href="#">Conferencias</a></li>
-        <li><a href="#">Proximos Concursos</a></li>
+        <li><a href="#">Pr&oacute;ximos Concursos</a></li>
       </ul>  
     </nav>
 
     <div class="flexcontenedor">
     <!-- area del contenido dentro del section -->
-    <section class="posts item-section-aside-flex flexsection">
+    <section class="posts item-section-aside-flex">
       <!--primer article-->
       <!-- ultimo item dentro de un contenido semantico -->
       <article class="post item-section">
@@ -234,10 +240,10 @@
 
     </section>
 
-    <aside class="item-section-aside-flex">
+    <aside >
       <article>
         <div class="redes_sociales">
-          <h4><strong>Siguenos en las Redes</strong> </h4>
+          <h2><strong>Siguenos en las Redes</strong> </h2>
           <a class="facebook" href="#"></a>
           <a class="twitter" href="#"></a>
           <a class="google" href="#"></a>
@@ -247,67 +253,22 @@
       </article>
 
       <!--primer top articulos-->
-     
-      <article>
-         <h4>TOP Articulos</h4>
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="http://lorempixel.com/40/40/"/>     </figure>
-            <h3 class="titulo-articulo1">Ranking de las mejores distribuciones GNU/Linux de 2015</h3>
-         
-        </div>
-      </article>
-
+     <ul class="articulos-novedades">
+     <li><a href="#"> <img src="http://lorempixel.com/40/40/" alt="img1">Ranking de las mejores distribuciones GNU/Linux de 2015</a></li> 
       <!--segundo top articulos-->
-      <article>
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="http://lorempixel.com/40/40/"/>
-          </figure>
-          <h3 class="titulo-articulo">Recopilacion de las distribuciones ligeras</h3>
-        </div>
-      </article>
+    <li><a href="#"><img src="http://lorempixel.com/40/40/" alt="img1">Recopilacion de las distribuciones ligeras</a></li>
 
       <!--tercer top articulos-->
-      <article>
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="#"/>
-          </figure>
-          <h3 class="titulo-articulo">Como se maneja un arduino</h3>
-        </div>
-      </article>
+    <li><a href="#"><img src="http://lorempixel.com/40/40/" alt="img1">Como se maneja un arduino</a></li>
 
 <!--cuarto top articulos-->
-      <article>
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="#"/>
-          </figure>
-          <h3 class="titulo-articulo">Recopilacion de las distribuciones ligeras</h3>
-        </div>
-      </article>
+    <li><a href="#"><img src="http://lorempixel.com/40/40/" alt="img1">Recopilacion de las distribuciones ligeras</a></li>
 
       <!--quinto top articulos-->
-      <article>
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="#"/>
-          </figure>
-          <h3 class="titulo-articulo">Erle Robotics entre las 15 start-ups finalistas en Robohub 2015</h3>
-        </div>
-      </article>
-
+    <li><a href="#"><img src="http://lorempixel.com/40/40/" alt="img1">Erle Robotics entre las 15 start-ups finalistas en Robohub 2015</a></li>
  <!--sexto top articulos-->
-      <article class="post">
-        <div class="top-articulos">
-          <figure class="articulo">
-            <img alt="articulo" src="#"/>
-          </figure>
-          <h3 class="titulo-articulo">Erle-Brain 2: el nuevo cerebro robótico de Erle Robotics</h3>
-        </div>
-      </article>
-
+    <li><a href="#"><img src="http://lorempixel.com/40/40/" alt="img1">Erle-Brain 2: el nuevo cerebro robótico de Erle Robotics</a></li>
+     </ul>
       <article>
         <div class="secciones">
           <h2>Secciones</h2>
@@ -325,6 +286,30 @@
         </div>
       </article>
 
+      <article>
+        <div class="secciones">
+          <h2>Conferencias</h2>
+       <ul class="menu-secciones">
+        <li><a href="#">Fecha 1</a></li>
+        <li><a href="#">Fecha 2</a></li>
+        <li><a href="#">Fecha 3</a></li>
+        <li><a href="#">Fecha 4</a></li>
+      </ul>  
+        </div>
+      </article>
+
+      <article>
+        <div class="secciones">
+          <h2>Proximos Concursos</h2>
+       <ul class="menu-secciones">
+        <li><a href="#">Fecha 1</a></li>
+        <li><a href="#">Fecha 2</a></li>
+        <li><a href="#">Fecha 3</a></li>
+        <li><a href="#">Fecha 4</a></li>
+      </ul>  
+
+        </div>
+      </article>
       
     </aside>
 
